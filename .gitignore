@@ -30,4 +30,7 @@ debug-*.log
 Thumbs.db
 
 # Project-specific
-2026-03-12 Summarize API
+2026-03-12 Summarize API.docx
+requirements.txt
+sample_summarize_request.json
+
