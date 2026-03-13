@@ -1,0 +1,12 @@
+# Render Blueprint: one Web Service for FastAPI (health, summarize, analyze-sentiment)
+# Add OPENAI_API_KEY in Render Dashboard > Environment (secret) - never commit the key.
+services:
+  - type: web
+    name: ww01hw-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+    # Service is public by default when deployed as a Web Service
